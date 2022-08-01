@@ -1,6 +1,6 @@
 # MapasApp
 
-desploy: https://62e85e60f8f70744971ad0b3--angular-maps-practica.netlify.app/
+desploy: https://angular-maps-practica.netlify.app/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
