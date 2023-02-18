@@ -27,5 +27,10 @@
     </button>
 
   </li>
-
 </ul>
+<div *ngIf="distance > 0 && time > 0">
+
+  <h6>Distancia: {{distance}} km</h6>
+  <h6>Tiempo: {{time}} min</h6>
+
+</div>

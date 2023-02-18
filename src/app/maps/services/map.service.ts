@@ -12,6 +12,8 @@ export class MapService {
 
   private map?: Map;
   private markers: Marker[] = [];
+  public kilometer: number = 0;
+  public duration: number = 0;
 
   constructor(private directionsApi: DirectionsApiClient){
 
@@ -20,6 +22,7 @@ export class MapService {
   get isMapReady(){
     return !!this.map;
   }
+
 
   setMap( map: Map){
     this.map = map;
@@ -85,6 +88,8 @@ export class MapService {
 
     const coords = route.geometry.coordinates;
 
+    this.kilometer = Math.round(route.distance/1000);
+    this.duration = Math.round(route.duration/60);
     const bounds = new LngLatBounds();
     coords.forEach( ([lng,lat])=> bounds.extend([lng,lat]));
 

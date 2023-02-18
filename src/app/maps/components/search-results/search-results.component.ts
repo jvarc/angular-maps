@@ -11,6 +11,8 @@ import { MapService } from '../../services/map.service';
 export class SearchResultsComponent{
   private debouncerTimer?: NodeJS.Timeout;
   public selectedId: string = '';
+  public distance: number = 0;
+  public time: number = 0;
 
   constructor(
     private placeService: PlacesService,
@@ -44,7 +46,10 @@ export class SearchResultsComponent{
 
 
     this.mapService.getRouteBetweenPoints(start, end);
+    setTimeout(() => {
+      this.distance = this.mapService.kilometer;
+      this.time = this.mapService.duration;
+    }, 1000);
   }
-
 
 }
