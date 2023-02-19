@@ -25,7 +25,7 @@ export class DirectionsApiClient extends HttpClient {
         language: 'es',
         overview: 'simplified',
         steps: 'false',
-        access_token: 'pk.eyJ1IjoianZhcmMiLCJhIjoiY2xlOGRjZ3VsMGVhODN2bmJ3cmZraDltOCJ9._ifIhQAwg2xj_VHulxH0cg'
+        access_token: environment.API_KEY,
       }
     });
   }

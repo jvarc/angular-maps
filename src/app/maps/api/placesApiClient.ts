@@ -27,7 +27,7 @@ export class PlacesApiClient extends HttpClient {
         limit: 5,
         //types: 'place,postcode,address',
         language: 'es',
-        access_token:'pk.eyJ1IjoianZhcmMiLCJhIjoiY2xlOGRjZ3VsMGVhODN2bmJ3cmZraDltOCJ9._ifIhQAwg2xj_VHulxH0cg',
+        access_token: environment.API_KEY,
         ...options.params
       }
     });
